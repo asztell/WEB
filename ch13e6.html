@@ -1,0 +1,35 @@
+<!doctype html>
+	<head>
+			<title>Assignment 10_c</title>
+			
+			<style type="text/css">
+				body {
+					background-color: lightblue;
+				}
+			</style>
+				
+			<script type="text/javascript">
+				function checkSubmit() {
+					if (document.getElementById('textbox').value == "") {
+						alert("you didn't fill out the textbox");
+					}
+					//document.getElementById('textbox').focus();
+				}
+			</script>
+			
+	</head>
+	
+	<body>
+			<form id="form1"><br><br>
+				<input type="text" id="textbox" value="">
+				<input type="submit" id="submit" value="Submit">
+			</form>
+		
+			<script type="text/javascript">
+				var input = document.getElementById('submit');
+				input.onclick = checkSubmit;
+			</script>
+	</body>
+	
+</html>
+

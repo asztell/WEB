@@ -1,0 +1,47 @@
+<!doctype html>
+	<head>
+			<title>Assignment 10_a</title>
+			<style type="text/css">
+				body {
+					background-color: lightblue;
+					color: yellow;
+				}
+			</style>
+
+			<script type="text/javascript">
+				function checkButton() {
+					if (this.name == 'movies') {
+						alert('you want to shoot movies');
+					} else if (this.name == 'guns') {
+						alert('you want to shoot guns');
+					} else {
+						alert('you want to play basketball');
+					}
+				}
+			</script>
+	</head>
+
+	<body>
+		<div id="buttons" align="center">
+			<br><br>
+			<button name="movies" id="movies" type="button" style="width:200px; height:35px">Shoot movies
+			</button><br><br><br>
+			<button name="guns" id="guns" type="button" style="width:200px; height:35px">Shoot guns
+			</button><br><br><br>
+			<button name="bballs" id="bballs" type="button" style="width:200px; height:35px">Shoot basketballs
+			</button>
+		</div>
+	</body>
+
+		<script type="text/javascript">
+			var buttons = document.getElementById("buttons").getElementsByTagName("button");
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].onclick = checkButton;
+			}
+		</script>
+	
+</html>
+
+
+
+

@@ -1,0 +1,31 @@
+<!doctype html>
+	<head>
+			<title>Assignment 10_a</title>
+			<style type="text/css">
+				body {
+					background-color: lightblue;
+				}
+			</style>
+			<script type="text/javascript">
+				function  checkUserInput() {
+					if (this.value == "") {
+						alert('you must enter your name and address');
+						this.focus();
+						this.select();
+					}
+				}
+			</script>
+	</head>
+	<body>
+		<form id="form1"><br><br>
+			Enter name: <input type="text" id="name" value="x"><br><br>
+			Enter address: <input type="text" id="address" value="o">
+		</form>
+	</body>
+	<script type="text/javascript">
+		var buttons = document.getElementById("form1").getElementsByTagName("input");
+		for (var i=0; i<buttons.length; i++) {
+		    buttons[i].onblur = checkUserInput;
+		}
+	</script>
+</html>
